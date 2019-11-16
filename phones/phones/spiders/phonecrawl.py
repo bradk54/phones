@@ -6,6 +6,7 @@ import string
 from scrapy import Request
 from phones.items import PhonesItem
 # import pandas as pd
+# scrape phone data from gsmarena website
 url = 'https://www.gsmarena.com/'
 class PhonecrawlSpider(scrapy.Spider):
     name = 'phonecrawl'
