@@ -20,7 +20,8 @@ class PhonecrawlSpider(scrapy.Spider):
 
 
     def parse_dat(self,response):
-        for sel in response.xpath('//h1[contains(@class,"specs-phone-name-title")]'):
+        for sel in response.xpath('//body'):
             item = PhonesItem()
-            item['title'] = sel.xpath('text()').extract()
+            item['title'] = sel.xpath('.//h1[contains(@class,"specs-phone-name-title")]/text()').extract()
+            item['screen'] = sel.xpath('.//td[@data-spec="displaysize"]/text()').extract()
             yield item

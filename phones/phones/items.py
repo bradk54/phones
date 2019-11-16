@@ -11,4 +11,5 @@ import scrapy
 class PhonesItem(scrapy.Item):
     # define the fields for your item here like:
     title = scrapy.Field()
+    screen = scrapy.Field()
     # pass
