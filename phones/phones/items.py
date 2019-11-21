@@ -22,4 +22,6 @@ class PhonesItem(scrapy.Item):
     batterySize = scrapy.Field()
     basePrice = scrapy.Field()
     pricing = scrapy.Field()
+    capacities = scrapy.Field()
+
     # pass
