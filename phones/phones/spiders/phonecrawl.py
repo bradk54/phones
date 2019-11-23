@@ -34,5 +34,7 @@ class PhonecrawlSpider(scrapy.Spider):
             item['sensors']= sel.xpath('.//td[@data-spec="sensors"]/text()').extract()
             item['batterySize'] = sel.xpath('.//td[@data-spec="batdescription1"]/text()').extract()
             item['basePrice']=sel.xpath('.//td[@data-spec="price"]/a/text()').extract()
-            # item['pricing']=sel.xpath('.//td[@data-spec="sensors"]/text()').extract()
+            item['released']=sel.xpath('.//td[@data-spec="year"]/text()').extract()
+            item['capacities'] = sel.xpath('.//div[@class = "pricing"]/span/text()').extract()
+            item['pricing']=sel.xpath('.//div[@class = "pricing"]//a/text()').extract()
             yield item
