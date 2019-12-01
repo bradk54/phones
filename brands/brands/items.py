@@ -10,5 +10,18 @@ import scrapy
 
 class BrandsItem(scrapy.Item):
     # define the fields for your item here like:
-    # name = scrapy.Field()
+    title = scrapy.Field()
+    screen = scrapy.Field()
+    screenRes = scrapy.Field()
+    screenType = scrapy.Field()
+    opSys = scrapy.Field()
+    memory = scrapy.Field()
+    rearCamera = scrapy.Field()
+    frontCamera = scrapy.Field()
+    sensors = scrapy.Field()
+    batterySize = scrapy.Field()
+    basePrice = scrapy.Field()
+    pricing = scrapy.Field()
+    capacities = scrapy.Field()
+    released = scrapy.Field()
     pass
