@@ -9,7 +9,7 @@ from brands.items import BrandsItem
 class CrawlbrandSpider(scrapy.Spider):
     name = 'crawlbrand'
     allowed_domains = ['www.gsmarena.com']
-    start_urls = ["http://www.gsmarena.com/samsung-phones-9.php",]
+    start_urls = ["http://www.gsmarena.com/lg-phones-20.php",]
     base_url = 'http://www.gsmarena.com/'
     rules = [Rule(LinkExtractor(allow=('/pn\d+')),callback='parse',follow=True)]
 
